@@ -36,9 +36,9 @@ make start
 O arquivo Makefile ainda contém as seguintes tarefas:
 
 ```shell
-make connect  # conecta ao contâiner do projeto Django
+make connect  # conecta ao contêiner do projeto Django
 make lint  # executa algumas verificações estáticas no código
 make lint-fix  # corrige algumas infrações vista na tarefa `lint`
-make start  # inicia os contâineres do projeto
-make stop  # para os contâineres em execução
+make start  # inicia os contêineres do projeto
+make stop  # para os contêineres em execução
 ```
