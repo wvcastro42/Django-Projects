@@ -1,0 +1,24 @@
+---
+version: '3.6'
+services:
+    web:
+        build:
+            context: ../
+            dockerfile: .docker/Dockerfile
+        env_file: ../.env
+        ports:
+            - "8000:8000"
+        depends_on:
+            - database
+        volumes:
+            - ../tutorial:/code
+    database:
+        image: postgres
+        ports:
+            - "5432:5432"
+        environment:
+            POSTGRES_DB: tutorial
+            POSTGRES_USER: user
+            POSTGRES_PASSWORD: password
+        volumes:
+            - /tmp/django-tutorial-database:/var/lib/postgresql/data
